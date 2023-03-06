@@ -1,0 +1,47 @@
+{% extends 'index.html' %}
+{% block title %}Details - Trivandrum Bank {% endblock %}
+{% block body %}
+<div class="container">
+<form method="post" id="detailsForm" class="mt-4" data-branches-url="{% url 'bank_app:ajax_load_branches' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit">
+</form>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script>
+    function calculateAge() {
+      const dob = new Date(document.getElementById("id_date_of_birth").value);
+      const today = new Date();
+      const ageInMilliseconds = today - dob;
+      const ageInYears = ageInMilliseconds / (1000 * 60 * 60 * 24 * 365.25);
+      document.getElementById("id_age").value = Math.floor(ageInYears);
+    }
+    $("#id_district").change(function () {
+        const url = $("#detailsForm").attr("data-branches-url");  // get the url of the `load_cities` view
+        const districtId = $(this).val();  // get the selected country ID from the HTML input
+
+        $.ajax({                       // initialize an AJAX request
+            url: url,                    // set the url of the request (= /persons/ajax/load-cities/ )
+            data: {
+                'district_id': districtId       // add the country id to the GET parameters
+            },
+            success: function (data) {   // `data` is the return of the `load_cities` view function
+                console.log(data)
+                $("#id_branch").html(data);  // replace the contents of the city input with the data that came from the server
+                /*
+
+                let html_data = '<option value="">---------</option>';
+                data.forEach(function (city) {
+                    html_data += `<option value="${city.id}">${city.name}</option>`
+                });
+                console.log(html_data);
+                $("#id_city").html(html_data);
+
+                */
+            }
+        });
+
+    });
+</script>
+{% endblock %}

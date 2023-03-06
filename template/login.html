@@ -1,0 +1,11 @@
+{% extends 'index.html' %}
+{% block title %}Login - Trivandrum Bank {% endblock %}
+{% block body %}
+    <form action="" id="login" method="post" class="mt-4">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="User-name" required="required">
+        <input type="password" name="password" placeholder="Password" required="required">
+        <input type="submit" class="btn" value="Submit">
+        <a href="/register" class="new-register">New Registration</a>
+    </form>
+{% endblock %}

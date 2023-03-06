@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+{% block title %}Home - Trivandrum Bank {% endblock %}
+{% block body %}
+<div class="container-fluid text-center">
+    <div class="row mt-4">
+        <div class="col">
+            <div class="form">
+                <h2>Branches</h2>
+                    {% for branch in branches|slice:":3" %}
+                        <button class="branch-button"><a class="dropdown-item" href="{{branch.wiki}}">{{branch.branch}}</a></button>
+                    {% endfor %}
+            </div>
+        </div>
+        <div class="col">
+            <div class="form">
+                {% if user.is_authenticated %}
+                <a href='/logout'><button class="home-button">Logout</button></a>
+                <a href='/details'><button class="home-button">Details</button></a>
+                {% else %}
+                <a href='/login'><button class="home-button">Login</button></a>
+                <a href='/register'><button class="home-button">Register</button></a>
+                {% endif %}
+            </div>
+            
+        </div>
+    </div>
+</div>
+{% endblock %}

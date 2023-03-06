@@ -1,0 +1,234 @@
+form[class="mt-4"],
+div[class="form"]{
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+  }
+  div[class="form"]{
+    height: 350px;
+  }
+  h2 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: inline-block;
+    width: 150px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+input[type="text"][name="username"],
+input[type="password"][name="password"],
+input[type="password"][name="confirm-password"] {
+    width: 100%;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+  }
+  textarea{
+    height: 100px;
+  }
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    appearance: none;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath fill='%23ccc' d='M.5 2l3 3 3-3h-6z'/%3E%3C/svg%3E") no-repeat;
+    background-position: right 10px top 50%;
+  }
+  
+  input[type="radio"],
+  input[type="checkbox"] {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  input[type="submit"]{
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+  .new-register,.home-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(to bottom, #00b4db 0%, #0083b0 100%);
+    border-radius: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease-in-out;
+  }
+  .home-button,.branch-button{
+    display: block;
+    height: 45px;
+    width: 45%;
+    margin: auto;
+    margin-top: 2em;
+    border: none;
+  }
+
+  .branch-button {
+    display: block;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(to bottom, #ff8c00 0%, #ffa500 100%);
+    border-radius: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .branch-button:hover {
+    background: linear-gradient(to bottom, #ffa500 0%, #ff8c00 100%);
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+    border: 1px solid #ffa500;
+  }
+  
+  
+  .new-register:hover ,.home-button:hover{
+    background: linear-gradient(to bottom, #0083b0 0%, #00b4db 100%);
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+    border: 1px solid #00b4db;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* Change the background color of the navbar */
+.navbar {
+    background-color: #222;
+  }
+  
+  /* Change the color of the navbar links */
+  .navbar a,#home-text,#dropdown-text {
+    color: #fff;
+  }
+  
+  /* Add a hover effect to the navbar links */
+  .navbar a:hover, #home-text:hover,#dropdown-text:hover {
+    color: #f90;
+  }
+  
+  /* Change the color of the active navbar link */
+  .navbar .active {
+    color: #f90;
+  }
+  
+  /* Change the color of the navbar dropdown links */
+  .dropdown-menu a {
+    color: #222;
+  }
+  
+  /* Add a hover effect to the navbar dropdown links */
+  .dropdown-menu a:hover {
+    color: #f90;
+  }
+  
+  /* Change the color of the search button */
+  .btn-outline-success {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+  }
+  
+  /* Add a hover effect to the search button */
+  .btn-outline-success:hover {
+    color: #fff;
+    background-color: #218838;
+    border-color: #1e7e34;
+  }
+  
+  /* Change the color of the navbar toggler icon */
+  .navbar-toggler-icon {
+    background-color: #fff;
+  }
+  
+  /* Change the color of the navbar toggler icon on hover */
+  .navbar-toggler:hover .navbar-toggler-icon {
+    background-color: #f90;
+  }
+  
+
+  footer {
+    background-color: #444;
+    color: #fff;
+    padding: 10px 0 5px 0;
+    font-size: 14px;
+  }
+  
+  footer h4 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  footer ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  footer ul li {
+    margin-bottom: 10px;
+  }
+  
+  footer ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  footer ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 767px) {
+    footer .col-md-4 {
+      margin-bottom: 30px;
+    }
+  }
+  

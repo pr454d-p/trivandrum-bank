@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+{% block title %}New Register - Trivandrum Bank {% endblock %}
+{% block body %}
+<form action="register" id="register" class="mt-4" method="POST">
+    {% csrf_token %}
+    <input type="text" class="contact_input inpt" name="username" placeholder="Your User-name" required="required">
+    <input type="password" class="contact_input inpt" placeholder="Your Password" name="password" required="required">
+    <input type="password" class="contact_input inpt" placeholder="Confrim Password" name="confirm-password" required="required">
+    <input type="submit" value="Sign-up">
+    {% for msg in messages %}
+    <h6 style="color: red;">{{msg}}</h6>
+    {% endfor %}
+</form>
+{% endblock %}
